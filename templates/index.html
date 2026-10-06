@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direction de l'Éducation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            direction: ltr;
+            padding: 30px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px #0001;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #174c79;
+        }
+        label {
+            display: block;
+            margin: 15px 0 7px;
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #1769aa;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #104c7d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Direction de l'Éducation</h1>
+        <h2>Informations de l'établissement</h2>
+
+        <form method="POST">
+            <label>Nom du directeur :</label>
+            <input type="text" name="nom" required>
+
+            <label>Nom de l'établissement :</label>
+            <input type="text" name="etablissement" required>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
