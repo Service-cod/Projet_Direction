@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administration</title>
+    <a href="/export">
+    <button type="button">Télécharger Excel</button>
+</a>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #174c79;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #174c79;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Administration</h1>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Nom du directeur</th>
+                <th>Établissement</th>
+                <th>Date d'envoi</th>
+            </tr>
+
+            {% for directeur in directeurs %}
+
+            <tr>
+                <td>{{ directeur.id }}</td>
+                <td>{{ directeur.nom }}</td>
+                <td>{{ directeur.etablissement }}</td>
+                <td>{{ directeur.date_envoi }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</body>
+</html>
