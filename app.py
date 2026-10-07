@@ -102,6 +102,7 @@ def export_excel():
         as_attachment=True,
         download_name="Reponses_Directeurs.xlsx"
     )
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run(host="0.0.0.0", port=5000, debug=True)
